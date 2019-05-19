@@ -13,15 +13,19 @@ export default class ShowPage extends Component {
   renderProduct = () => {
     return this.state.product.map(item => {
       return (
-        <div key={item.id}>
-          <div>
+        <div key={item.id} className="show-page-content">
+          <div className="show-page-left">
+          <div className="show-page-image">
             <img src={item.image} alt="product"/>
           </div>
+          </div>
+          <div className="show-page-right">
           <div>
             {item.title}
           </div>
           <div>
             {Number(item.price).toFixed(2)}
+          </div>
           </div>
         </div>
       )
